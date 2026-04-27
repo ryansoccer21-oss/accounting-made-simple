@@ -34,6 +34,15 @@ export default function ContactPage() {
             <p>
               <strong>Best first step:</strong> Send a short message explaining what you need help with.
             </p>
+            <p>
+              <strong>Response time:</strong> {contactInfo.responseTime}
+            </p>
+            <p>
+              <strong>Availability:</strong> {contactInfo.availabilityNote}
+            </p>
+            <p>
+              <strong>Payment:</strong> {contactInfo.paymentNote}
+            </p>
           </div>
           <div className="mt-8">
             <SocialLinks />
