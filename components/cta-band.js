@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { contactInfo } from "../lib/site-data";
 
 export default function CtaBand() {
@@ -17,9 +16,14 @@ export default function CtaBand() {
             </p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
-            <Link className="cta-primary" href="/contact">
-              Contact Me
-            </Link>
+            <a
+              className="cta-primary"
+              href={contactInfo.bookingUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Schedule Your Session
+            </a>
             <a className="text-sm font-semibold text-[color:var(--brand)]" href={`mailto:${contactInfo.email}`}>
               {contactInfo.email}
             </a>
