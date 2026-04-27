@@ -11,8 +11,8 @@ export default function CtaBand() {
               Ready for tutoring that feels clear and manageable?
             </h2>
             <p className="section-copy mt-5 max-w-2xl">
-              Reach out by email or phone and share what you need help with. The goal is to
-              make the next step easy.
+              First session is 50% off. Reach out by email or phone, or book directly
+              through the calendar when you are ready.
             </p>
           </div>
           <div className="flex flex-col gap-3 md:items-end">
@@ -27,6 +27,7 @@ export default function CtaBand() {
             <a className="text-sm font-semibold text-[color:var(--brand)]" href={`mailto:${contactInfo.email}`}>
               {contactInfo.email}
             </a>
+            <p className="text-sm text-slate-600">{contactInfo.responseTime}</p>
           </div>
         </div>
       </div>
