@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { contactInfo, heroBadges, serviceTopics } from "../lib/site-data";
+import { contactInfo, heroBadges, profileImageUrl, serviceTopics, whoIHelp } from "../lib/site-data";
 
 export default function HomeHero() {
   return (
@@ -10,6 +11,9 @@ export default function HomeHero() {
           <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--line)] bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
             <span className="size-2 rounded-full bg-[color:var(--mint)]" />
             Made Simple Tutoring
+          </div>
+          <div className="mt-4 inline-flex rounded-full bg-[color:var(--brand)] px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white">
+            First session 50% off
           </div>
           <h1 className="mt-6 max-w-[11ch] font-serif text-5xl font-semibold leading-[0.95] md:text-7xl">
             Clear tutoring for accounting, Excel, and money basics
@@ -29,13 +33,21 @@ export default function HomeHero() {
             ))}
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link className="cta-primary" href="/contact">
-              Book a Conversation
-            </Link>
+            <a
+              className="cta-primary"
+              href={contactInfo.bookingUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Schedule Your Session
+            </a>
             <Link className="cta-secondary" href="/services">
               Explore Services
             </Link>
           </div>
+          <p className="mt-4 text-sm font-semibold text-slate-600">
+            First session 50% off. Book a time that works for you.
+          </p>
           <div className="mt-10 grid gap-4 border-t border-[color:var(--line)] pt-6 sm:grid-cols-3">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--warm)]">
@@ -62,6 +74,25 @@ export default function HomeHero() {
 
         <aside className="grid gap-4">
           <div className="surface-card overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(177,109,59,0.12),transparent_26%),linear-gradient(180deg,rgba(228,237,243,0.88),rgba(255,253,249,0.98))] p-6">
+            <div className="mb-4 overflow-hidden rounded-[28px] border border-[var(--line)] bg-white/90">
+              <div className="relative aspect-[4/4.7] w-full">
+                <Image
+                  alt="Ryan Parks"
+                  className="object-cover"
+                  fill
+                  priority
+                  sizes="(min-width: 1024px) 320px, 100vw"
+                  src={profileImageUrl}
+                  unoptimized
+                />
+              </div>
+              <div className="p-5">
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
+                  Ryan Parks
+                </p>
+                <p className="mt-2 text-lg font-semibold text-slate-900">Accounting tutor and recent UMass Lowell graduate</p>
+              </div>
+            </div>
             <div className="rounded-[28px] border border-[var(--line)] bg-white/85 p-5">
               <p className="eyebrow">Session Focus</p>
               <h2 className="text-2xl font-semibold text-slate-900">What you can get help with</h2>
@@ -95,6 +126,17 @@ export default function HomeHero() {
           </div>
 
           <div className="surface-card bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(244,238,226,0.96))] p-6">
+            <p className="eyebrow">Who I Help</p>
+            <div className="mb-6 grid gap-3">
+              {whoIHelp.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-[24px] border border-[var(--line)] bg-white/85 px-4 py-4 text-sm leading-7 text-slate-700"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
             <p className="eyebrow">How It Works</p>
             <div className="grid gap-3">
               {[
