@@ -1,5 +1,7 @@
+import Image from "next/image";
 import PageHero from "../../components/page-hero";
-import { aboutHighlights } from "../../lib/site-data";
+import SocialLinks from "../../components/social-links";
+import { aboutHighlights, profileImageUrl } from "../../lib/site-data";
 
 export const metadata = {
   title: "About"
@@ -16,6 +18,33 @@ export default function AboutPage() {
       />
 
       <section className="site-shell section-gap grid gap-4 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
+        <aside className="surface-card overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(29,77,108,0.08),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(223,234,241,0.5))] p-8 md:order-2">
+          <div className="overflow-hidden rounded-[28px] border border-[var(--line)] bg-white/90">
+            <div className="relative aspect-[4/4.7] w-full">
+              <Image
+                alt="Ryan Parks"
+                className="object-cover"
+                fill
+                sizes="(min-width: 768px) 320px, 100vw"
+                src={profileImageUrl}
+                unoptimized
+              />
+            </div>
+          </div>
+          <div className="mt-6 rounded-[28px] border border-[var(--line)] bg-white/90 p-5">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
+              Ryan Parks
+            </p>
+            <p className="mt-2 text-2xl font-semibold text-slate-900">Accounting Tutor</p>
+            <p className="mt-3 leading-7 text-slate-600">
+              UMass Lowell graduate with an accounting concentration, focused on clear, patient support.
+            </p>
+          </div>
+          <div className="mt-6">
+            <SocialLinks />
+          </div>
+        </aside>
+
         <article className="surface-card p-8">
           <p className="eyebrow">Why I Chose To Do This</p>
           <h2 className="section-title text-4xl md:text-5xl">Support that matches how students actually learn</h2>
@@ -40,7 +69,7 @@ export default function AboutPage() {
           </div>
         </article>
 
-        <aside className="surface-card bg-[radial-gradient(circle_at_top_left,rgba(29,77,108,0.08),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(223,234,241,0.5))] p-8">
+        <aside className="surface-card bg-[radial-gradient(circle_at_top_left,rgba(29,77,108,0.08),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(223,234,241,0.5))] p-8 md:order-3">
           <p className="eyebrow">What I Also Help With</p>
           <blockquote className="font-serif text-3xl font-semibold leading-tight text-slate-900">
             “I keep it practical, clear, and focused on the skills people actually need to use.”
