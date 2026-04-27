@@ -12,10 +12,13 @@ export default function HomePage() {
     <>
       <HomeHero />
 
-      <section className="site-shell -mt-4 grid gap-4 md:grid-cols-3">
+      <section className="site-shell grid gap-4 md:grid-cols-3">
         {trustPoints.map((point, index) => (
-          <article key={point.title} className="surface-card p-6">
-            <p className="mb-3 text-sm font-bold text-[color:var(--warm)]">
+          <article
+            key={point.title}
+            className="surface-card bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,244,236,0.92))] p-6"
+          >
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--warm)]">
               {String(index + 1).padStart(2, "0")}
             </p>
             <h2 className="mb-3 text-xl font-semibold text-slate-900">{point.title}</h2>
@@ -27,10 +30,10 @@ export default function HomePage() {
       <section className="site-shell section-gap">
         <SectionHeading
           eyebrow="Services"
-          title="Practical support that feels clear and organized"
-          copy="Support for school, personal learning, and everyday money skills."
+          title="Practical support that is easy to scan and easy to understand"
+          copy="A cleaner services section helps visitors see what you offer without reading through long paragraphs."
         />
-        <ServiceGrid items={services.slice(0, 3)} />
+        <ServiceGrid items={services.slice(0, 4)} />
         <div className="mt-8 flex">
           <Link className="cta-secondary" href="/services">
             See All Services
@@ -42,12 +45,12 @@ export default function HomePage() {
         <article className="surface-card bg-[radial-gradient(circle_at_top_right,rgba(177,109,59,0.08),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,253,249,1))] p-8">
           <p className="eyebrow">Why It Works</p>
           <h2 className="section-title max-w-[13ch] text-4xl md:text-5xl">
-            Tutoring built for real understanding
+            A homepage that feels more organized and more trustworthy
           </h2>
           <p className="section-copy mt-5 max-w-2xl">
-            Accounting Made Simple is designed for students and beginners who want clear,
-            repeatable steps instead of vague advice. The goal is to make difficult
-            material feel more manageable, organized, and easier to use.
+            The layout now moves in a clearer order: strong first impression, simple
+            service overview, helpful questions, and an easy way to make contact. That
+            keeps the site friendly while making it feel more polished.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {heroBadges.map((badge) => (
