@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --surface: #fffdf9;
+  --surface-soft: #f4eee2;
+  --line: rgba(148, 163, 184, 0.2);
+  --ink-soft: #4c5f56;
+  --brand: #1d4d6c;
+  --brand-dark: #12364d;
+  --warm: #b16d3b;
+  --mint: #5f7c59;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), Georgia, serif;
+  letter-spacing: -0.03em;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+@layer components {
+  .site-shell {
+    @apply mx-auto w-[min(1120px,calc(100%-1.5rem))];
+  }
+
+  .surface-card {
+    @apply rounded-[32px] border border-[var(--line)] bg-[color:var(--surface)] shadow-[0_24px_60px_rgba(15,23,42,0.08)];
+  }
+
+  .section-gap {
+    @apply py-16 md:py-20;
+  }
+
+  .eyebrow {
+    @apply mb-3 text-xs font-bold uppercase tracking-[0.22em] text-[color:var(--brand)];
+  }
+
+  .section-title {
+    @apply font-serif text-3xl font-semibold tracking-tight text-slate-900 md:text-5xl;
+  }
+
+  .section-copy {
+    @apply text-base leading-8 text-slate-600 md:text-lg;
+  }
+
+  .cta-primary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-[color:var(--brand)] px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[color:var(--brand-dark)];
+  }
+
+  .cta-secondary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-slate-100 px-6 py-3 text-sm font-bold text-[color:var(--brand)] transition hover:-translate-y-0.5 hover:bg-slate-200;
+  }
+}
