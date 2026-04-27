@@ -1,6 +1,6 @@
-import FaqList from "../../../components/faq-list";
-import PageHero from "../../../components/page-hero";
-import { faqItems } from "../../../lib/site-data";
+import FaqList from "../../components/faq-list";
+import PageHero from "../../components/page-hero";
+import { faqItems } from "../../lib/site-data";
 
 export const metadata = {
   title: "FAQ"
