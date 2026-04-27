@@ -1,5 +1,6 @@
 import CopyEmailButton from "../../components/copy-email-button";
 import PageHero from "../../components/page-hero";
+import SocialLinks from "../../components/social-links";
 import { contactInfo, contactSteps } from "../../lib/site-data";
 
 export const metadata = {
@@ -34,23 +35,8 @@ export default function ContactPage() {
               <strong>Best first step:</strong> Send a short message explaining what you need help with.
             </p>
           </div>
-          <div className="mt-8 flex flex-wrap gap-3 text-sm font-semibold">
-            <a
-              className="cta-secondary"
-              href={contactInfo.linkedinUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-            <a
-              className="cta-secondary"
-              href={contactInfo.facebookUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              Facebook
-            </a>
+          <div className="mt-8">
+            <SocialLinks />
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
             <a className="cta-primary" href={`mailto:${contactInfo.email}?subject=Tutoring%20Inquiry`}>
