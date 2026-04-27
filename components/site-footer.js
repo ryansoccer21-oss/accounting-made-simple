@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SocialLinks from "./social-links";
 import { contactInfo, navLinks } from "../lib/site-data";
 
 export default function SiteFooter() {
@@ -15,23 +16,8 @@ export default function SiteFooter() {
           <a className="mt-2 inline-flex text-sm font-semibold text-[color:var(--brand)]" href={`mailto:${contactInfo.email}`}>
             {contactInfo.email}
           </a>
-          <div className="mt-4 flex flex-wrap gap-4 text-sm font-semibold">
-            <a
-              className="text-slate-500 transition hover:text-[color:var(--brand)]"
-              href={contactInfo.linkedinUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
-            <a
-              className="text-slate-500 transition hover:text-[color:var(--brand)]"
-              href={contactInfo.facebookUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              Facebook
-            </a>
+          <div className="mt-4">
+            <SocialLinks compact />
           </div>
         </div>
         <nav className="mt-5 flex flex-wrap gap-5 text-sm text-slate-500 md:mt-0" aria-label="Footer">
