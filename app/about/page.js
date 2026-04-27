@@ -1,5 +1,5 @@
-import PageHero from "../../../components/page-hero";
-import { aboutHighlights } from "../../../lib/site-data";
+import PageHero from "../../components/page-hero";
+import { aboutHighlights } from "../../lib/site-data";
 
 export const metadata = {
   title: "About"
