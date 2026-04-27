@@ -1,6 +1,6 @@
-import PageHero from "../../../components/page-hero";
-import ServiceGrid from "../../../components/service-grid";
-import { serviceTopics, services } from "../../../lib/site-data";
+import PageHero from "../../components/page-hero";
+import ServiceGrid from "../../components/service-grid";
+import { serviceTopics, services } from "../../lib/site-data";
 
 export const metadata = {
   title: "Services"
