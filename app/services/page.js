@@ -1,4 +1,5 @@
 import PageHero from "../../components/page-hero";
+import PricingBooking from "../../components/pricing-booking";
 import ServiceGrid from "../../components/service-grid";
 import { serviceTopics, services } from "../../lib/site-data";
 
@@ -19,6 +20,8 @@ export default function ServicesPage() {
       <section className="site-shell section-gap">
         <ServiceGrid items={services} />
       </section>
+
+      <PricingBooking />
 
       <section className="site-shell pb-16">
         <article className="surface-card overflow-hidden md:grid md:grid-cols-[minmax(0,1fr)_300px]">
