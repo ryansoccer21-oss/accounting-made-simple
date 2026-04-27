@@ -2,6 +2,7 @@ import Link from "next/link";
 import CtaBand from "../components/cta-band";
 import FaqPreview from "../components/faq-preview";
 import HomeHero from "../components/home-hero";
+import PricingBooking from "../components/pricing-booking";
 import SectionHeading from "../components/section-heading";
 import ServiceGrid from "../components/service-grid";
 import Testimonials from "../components/testimonials";
@@ -40,6 +41,8 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      <PricingBooking />
 
       <section className="site-shell grid gap-4 pb-16 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
         <article className="surface-card bg-[radial-gradient(circle_at_top_right,rgba(177,109,59,0.08),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,253,249,1))] p-8">
