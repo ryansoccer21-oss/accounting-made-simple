@@ -5,9 +5,9 @@ export default function Testimonials() {
   return (
     <section className="site-shell pb-16">
       <SectionHeading
-        eyebrow="Why This Homepage Works Better"
-        title="A stronger first impression for new visitors"
-        copy="These sections are now built to answer the most important questions quickly: what you offer, who it is for, and how someone can reach out."
+        eyebrow="Testimonials"
+        title="What students are saying"
+        copy="Real feedback helps new visitors feel more comfortable reaching out for support."
       />
       <div className="grid gap-4 md:grid-cols-3">
         {testimonials.map((item) => (
