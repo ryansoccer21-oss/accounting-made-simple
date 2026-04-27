@@ -81,6 +81,26 @@ export default function PricingBooking() {
             </ul>
           </div>
 
+          <div className="mt-6 rounded-[28px] border border-[var(--line)] bg-white/90 p-5">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
+              Session Details
+            </p>
+            <div className="mt-3 space-y-3 text-sm leading-7 text-slate-700">
+              <p>
+                <strong>Format:</strong> {contactInfo.format}
+              </p>
+              <p>
+                <strong>Response time:</strong> {contactInfo.responseTime}
+              </p>
+              <p>
+                <strong>Availability:</strong> {contactInfo.availabilityNote}
+              </p>
+              <p>
+                <strong>Payment:</strong> {contactInfo.paymentNote}
+              </p>
+            </div>
+          </div>
+
           <div className="mt-6 flex flex-col gap-3">
             <a
               className="cta-primary"
