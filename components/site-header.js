@@ -13,9 +13,14 @@ export default function SiteHeader() {
     <header className="sticky top-0 z-20 border-b border-[var(--line)] bg-white/80 backdrop-blur">
       <div className="site-shell">
         <div className="relative flex min-h-[76px] items-center justify-between gap-4">
-          <Link className="font-serif text-xl font-semibold text-slate-900" href="/">
-            Accounting Made Simple
-          </Link>
+          <div className="flex items-center gap-3">
+            <div className="hidden size-11 items-center justify-center rounded-2xl bg-[linear-gradient(180deg,rgba(29,77,108,0.96),rgba(18,54,77,0.96))] text-sm font-bold tracking-[0.18em] text-white md:inline-flex">
+              AMS
+            </div>
+            <Link className="font-serif text-xl font-semibold text-slate-900" href="/">
+              Accounting Made Simple
+            </Link>
+          </div>
 
           <button
             aria-controls="site-nav"
@@ -33,7 +38,7 @@ export default function SiteHeader() {
           </button>
 
           <nav
-            className={`${open ? "flex" : "hidden"} absolute left-0 right-0 top-[calc(100%+0.5rem)] flex-col gap-3 rounded-[28px] border border-[var(--line)] bg-white p-4 shadow-[0_24px_60px_rgba(15,23,42,0.08)] md:static md:flex md:flex-row md:items-center md:gap-6 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none`}
+            className={`${open ? "flex" : "hidden"} absolute left-0 right-0 top-[calc(100%+0.5rem)] flex-col gap-3 rounded-[28px] border border-[var(--line)] bg-white p-4 shadow-[0_24px_60px_rgba(15,23,42,0.08)] md:static md:flex md:flex-row md:items-center md:gap-4 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none`}
             id="site-nav"
           >
             {navLinks.map((link) => {
@@ -51,6 +56,13 @@ export default function SiteHeader() {
                 </Link>
               );
             })}
+            <Link
+              className="cta-primary mt-2 md:mt-0 md:ml-3"
+              href="/contact"
+              onClick={() => setOpen(false)}
+            >
+              Contact
+            </Link>
           </nav>
         </div>
       </div>
