@@ -1,6 +1,6 @@
-import CopyEmailButton from "../../../components/copy-email-button";
-import PageHero from "../../../components/page-hero";
-import { contactInfo, contactSteps } from "../../../lib/site-data";
+import CopyEmailButton from "../../components/copy-email-button";
+import PageHero from "../../components/page-hero";
+import { contactInfo, contactSteps } from "../../lib/site-data";
 
 export const metadata = {
   title: "Contact"
