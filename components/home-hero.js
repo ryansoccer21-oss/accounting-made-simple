@@ -78,7 +78,7 @@ export default function HomeHero() {
                 <img
                   alt="Ryan Parks"
                   className="absolute inset-0 h-full w-full object-cover"
-                  src="/ryan-parks-photo.svg"
+                  src="/ryan-parks-320.jpg"
                 />
               </div>
               <div className="p-5">
