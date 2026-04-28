@@ -7,7 +7,7 @@ export default function PricingBooking() {
       <SectionHeading
         eyebrow="Pricing and Booking"
         title="Simple pricing and an easy way to book"
-        copy="Choose the session length that fits your needs. First session is 50% off."
+        copy="Choose the session length that fits your needs. First session is free."
       />
 
       <div className="grid gap-4 xl:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)]">
@@ -38,7 +38,7 @@ export default function PricingBooking() {
               </div>
             ))}
             <div className="mt-6 inline-flex rounded-full bg-[color:var(--brand)] px-5 py-3 text-sm font-bold text-white">
-              First session 50% off
+              First session free
             </div>
           </article>
 
