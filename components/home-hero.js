@@ -73,19 +73,29 @@ export default function HomeHero() {
 
         <aside className="grid gap-4">
           <div className="surface-card overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(177,109,59,0.12),transparent_26%),linear-gradient(180deg,rgba(228,237,243,0.88),rgba(255,253,249,0.98))] p-6">
-            <div className="mb-4 overflow-hidden rounded-[28px] border border-[var(--line)] bg-white/90">
-              <img
-                alt="Ryan Parks"
-                className="block h-auto w-full"
-                src="/ryan-parks-photo.svg"
-              />
-              <div className="p-5">
-                <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
-                  Ryan Parks
-                </p>
-                <p className="mt-2 text-lg font-semibold text-slate-900">
-                  Sessions are built for students, beginners, young adults, and anyone who wants clear, patient support.
-                </p>
+            <div className="mb-4 rounded-[28px] border border-[var(--line)] bg-white/90 p-6">
+              <p className="eyebrow">Personal Support</p>
+              <h2 className="text-2xl font-semibold text-slate-900">
+                Sessions that fit different learning styles and comfort levels
+              </h2>
+              <p className="mt-4 leading-8 text-slate-600">
+                Support is built for students, beginners, young adults, and anyone who wants
+                patient explanations, steady guidance, and a pace that feels manageable.
+              </p>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {[
+                  "Beginner-friendly from the start",
+                  "Clear step-by-step explanations",
+                  "Flexible help for school and real life",
+                  "A calm space to ask questions"
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-[22px] border border-[var(--line)] bg-[color:var(--surface)] px-4 py-3 text-sm font-medium leading-6 text-slate-700"
+                  >
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
             <div className="rounded-[28px] border border-[var(--line)] bg-white/85 p-5">
