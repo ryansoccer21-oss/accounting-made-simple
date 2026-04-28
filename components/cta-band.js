@@ -11,7 +11,7 @@ export default function CtaBand() {
               Ready for tutoring that feels clear and manageable?
             </h2>
             <p className="section-copy mt-5 max-w-2xl">
-              First session is 50% off. Reach out by email or phone, or book directly
+              First session is free. Reach out by email or phone, or book directly
               through the calendar when you are ready.
             </p>
           </div>
