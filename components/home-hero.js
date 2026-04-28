@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { contactInfo, heroBadges, profileImageUrl, serviceTopics, whoIHelp } from "../lib/site-data";
+import { contactInfo, heroBadges, serviceTopics, whoIHelp } from "../lib/site-data";
 
 export default function HomeHero() {
   return (
@@ -76,14 +75,10 @@ export default function HomeHero() {
           <div className="surface-card overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(177,109,59,0.12),transparent_26%),linear-gradient(180deg,rgba(228,237,243,0.88),rgba(255,253,249,0.98))] p-6">
             <div className="mb-4 overflow-hidden rounded-[28px] border border-[var(--line)] bg-white/90">
               <div className="relative aspect-[4/4.7] w-full">
-                <Image
+                <img
                   alt="Ryan Parks"
-                  className="object-cover"
-                  fill
-                  priority
-                  sizes="(min-width: 1024px) 320px, 100vw"
-                  src={profileImageUrl}
-                  unoptimized
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="/ryan-parks-photo.svg"
                 />
               </div>
               <div className="p-5">
