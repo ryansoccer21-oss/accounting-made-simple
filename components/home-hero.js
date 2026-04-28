@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { contactInfo, heroBadges, serviceTopics, whoIHelp } from "../lib/site-data";
 
@@ -95,6 +96,26 @@ export default function HomeHero() {
 
         <aside className="grid gap-4">
           <div className="surface-card overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(177,109,59,0.12),transparent_26%),linear-gradient(180deg,rgba(228,237,243,0.88),rgba(255,253,249,0.98))] p-6">
+            <div className="mb-4 overflow-hidden rounded-[28px] border border-[var(--line)] bg-white/90">
+              <div className="relative aspect-[4/5] w-full bg-slate-100">
+                <Image
+                  alt="Ryan Parks"
+                  className="object-cover object-center"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 420px"
+                  src="/images/ryan-profile-photo.jpg"
+                />
+              </div>
+              <div className="p-6">
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
+                  Ryan Parks
+                </p>
+                <p className="mt-2 text-lg font-semibold leading-8 text-slate-900">
+                  Sessions are built for students, beginners, young adults, and anyone who wants clear, patient support.
+                </p>
+              </div>
+            </div>
             <div className="mb-4 rounded-[28px] border border-[var(--line)] bg-white/90 p-6">
               <p className="eyebrow">Personal Support</p>
               <h2 className="text-2xl font-semibold text-slate-900">
