@@ -4,7 +4,7 @@ import { contactInfo, heroBadges, serviceTopics, whoIHelp } from "../lib/site-da
 export default function HomeHero() {
   return (
     <section className="site-shell section-gap pb-10">
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)]">
+      <div className="grid gap-4 lg:items-start lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)]">
         <article className="surface-card relative overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(29,77,108,0.12),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(177,109,59,0.08),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,253,249,1))] p-8 md:p-12">
           <div className="absolute right-6 top-6 hidden h-24 w-24 rounded-full border border-white/60 bg-[radial-gradient(circle,rgba(255,255,255,0.85),rgba(255,255,255,0))] lg:block" />
           <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--line)] bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
@@ -67,6 +67,24 @@ export default function HomeHero() {
               <a className="mt-2 block text-base font-semibold text-[color:var(--brand)]" href={`mailto:${contactInfo.email}`}>
                 {contactInfo.email}
               </a>
+            </div>
+          </div>
+          <div className="mt-8 rounded-[28px] border border-[var(--line)] bg-white/80 p-6">
+            <p className="eyebrow">A Good Fit If You Need</p>
+            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+              {[
+                "Homework help without feeling rushed",
+                "Exam review with clear walkthroughs",
+                "Excel support for school or work",
+                "Simple help with budgeting and money basics"
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-[22px] border border-[var(--line)] bg-[color:var(--surface)] px-4 py-3 text-sm font-medium leading-6 text-slate-700"
+                >
+                  {item}
+                </div>
+              ))}
             </div>
           </div>
         </article>
