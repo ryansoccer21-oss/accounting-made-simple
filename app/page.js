@@ -32,7 +32,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Services"
           title="Practical support that is easy to scan and easy to understand"
-          copy="A cleaner services section helps visitors see what you offer without reading through long paragraphs."
+          copy="Support is available for school, everyday money skills, and the topics that tend to feel the most confusing."
         />
         <ServiceGrid items={services.slice(0, 4)} />
         <div className="mt-8 flex">
@@ -46,14 +46,13 @@ export default function HomePage() {
 
       <section className="site-shell grid gap-4 pb-16 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
         <article className="surface-card bg-[radial-gradient(circle_at_top_right,rgba(177,109,59,0.08),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,253,249,1))] p-8">
-          <p className="eyebrow">Why It Works</p>
+          <p className="eyebrow">What You Can Expect</p>
           <h2 className="section-title max-w-[13ch] text-4xl md:text-5xl">
-            A homepage that feels more organized and more trustworthy
+            Support that feels clear, patient, and easier to keep up with
           </h2>
           <p className="section-copy mt-5 max-w-2xl">
-            The layout now moves in a clearer order: strong first impression, simple
-            service overview, helpful questions, and an easy way to make contact. That
-            keeps the site friendly while making it feel more polished.
+            Sessions are designed to help you understand the material, ask questions comfortably,
+            and move forward without feeling rushed or overwhelmed.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {heroBadges.map((badge) => (
