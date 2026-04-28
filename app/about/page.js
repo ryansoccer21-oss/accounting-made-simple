@@ -19,21 +19,19 @@ export default function AboutPage() {
       <section className="site-shell section-gap grid gap-4 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
         <aside className="surface-card overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(29,77,108,0.08),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(223,234,241,0.5))] p-8 md:order-2">
           <div className="overflow-hidden rounded-[28px] border border-[var(--line)] bg-white/90">
-            <div className="relative aspect-[4/4.7] w-full">
-              <img
-                alt="Ryan Parks"
-                className="absolute inset-0 h-full w-full object-cover"
-                src="/ryan-parks-320.svg"
-              />
-            </div>
+            <img
+              alt="Ryan Parks"
+              className="block h-auto w-full"
+              src="/ryan-parks.jpg"
+            />
           </div>
           <div className="mt-6 rounded-[28px] border border-[var(--line)] bg-white/90 p-5">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
               Ryan Parks
             </p>
-            <p className="mt-2 text-2xl font-semibold text-slate-900">Accounting Tutor</p>
+            <p className="mt-2 text-2xl font-semibold text-slate-900">Sessions that meet people where they are</p>
             <p className="mt-3 leading-7 text-slate-600">
-              UMass Lowell graduate with an accounting concentration, focused on clear, patient support.
+              Whether you are catching up, preparing for an exam, learning Excel, or building money basics, sessions are shaped around your pace, goals, and comfort level.
             </p>
           </div>
           <div className="mt-6">
