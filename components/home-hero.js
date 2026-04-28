@@ -12,7 +12,7 @@ export default function HomeHero() {
             Made Simple Tutoring
           </div>
           <div className="mt-4 inline-flex rounded-full bg-[color:var(--brand)] px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white">
-            First session 50% off
+            First session free
           </div>
           <h1 className="mt-6 max-w-[11ch] font-serif text-5xl font-semibold leading-[0.95] md:text-7xl">
             Clear tutoring for accounting, Excel, and money basics
@@ -45,7 +45,7 @@ export default function HomeHero() {
             </Link>
           </div>
           <p className="mt-4 text-sm font-semibold text-slate-600">
-            First session 50% off. Book a time that works for you.
+            First session is free. Book a time that works for you.
           </p>
           <div className="mt-10 grid gap-4 border-t border-[color:var(--line)] pt-6 sm:grid-cols-3">
             <div>
@@ -74,18 +74,18 @@ export default function HomeHero() {
         <aside className="grid gap-4">
           <div className="surface-card overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(177,109,59,0.12),transparent_26%),linear-gradient(180deg,rgba(228,237,243,0.88),rgba(255,253,249,0.98))] p-6">
             <div className="mb-4 overflow-hidden rounded-[28px] border border-[var(--line)] bg-white/90">
-              <div className="relative aspect-[4/4.7] w-full">
-                <img
-                  alt="Ryan Parks"
-                  className="absolute inset-0 h-full w-full object-cover"
-                  src="/ryan-parks-320.svg"
-                />
-              </div>
+              <img
+                alt="Ryan Parks"
+                className="block h-auto w-full"
+                src="/ryan-parks.jpg"
+              />
               <div className="p-5">
                 <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
                   Ryan Parks
                 </p>
-                <p className="mt-2 text-lg font-semibold text-slate-900">Accounting tutor and recent UMass Lowell graduate</p>
+                <p className="mt-2 text-lg font-semibold text-slate-900">
+                  Sessions are built for students, beginners, young adults, and anyone who wants clear, patient support.
+                </p>
               </div>
             </div>
             <div className="rounded-[28px] border border-[var(--line)] bg-white/85 p-5">
