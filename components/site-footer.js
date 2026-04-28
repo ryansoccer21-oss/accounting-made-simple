@@ -16,6 +16,18 @@ export default function SiteFooter() {
           <a className="mt-2 inline-flex text-sm font-semibold text-[color:var(--brand)]" href={`mailto:${contactInfo.email}`}>
             {contactInfo.email}
           </a>
+          <a className="mt-2 block text-sm font-semibold text-[color:var(--brand)]" href={`tel:${contactInfo.phone.replace(/[^0-9]/g, "")}`}>
+            {contactInfo.phone}
+          </a>
+          <p className="mt-3 text-sm leading-7 text-slate-500">
+            <span className="font-semibold text-slate-700">Format:</span> {contactInfo.format}
+          </p>
+          <p className="text-sm leading-7 text-slate-500">
+            <span className="font-semibold text-slate-700">Response time:</span> {contactInfo.responseTime}
+          </p>
+          <p className="text-sm leading-7 text-slate-500">
+            <span className="font-semibold text-slate-700">Payment:</span> {contactInfo.paymentNote}
+          </p>
           <div className="mt-4">
             <SocialLinks compact />
           </div>
