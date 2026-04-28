@@ -21,6 +21,9 @@ export default function HomeHero() {
             Friendly help for students, beginners, and young adults who want less stress,
             clearer explanations, and a better understanding of the material.
           </p>
+          <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-[color:var(--brand)]">
+            Recent UMass Lowell graduate with an accounting concentration
+          </p>
           <div className="mt-6 flex flex-wrap gap-3">
             {heroBadges.map((badge) => (
               <span
@@ -67,6 +70,7 @@ export default function HomeHero() {
               <a className="mt-2 block text-base font-semibold text-[color:var(--brand)]" href={`mailto:${contactInfo.email}`}>
                 {contactInfo.email}
               </a>
+              <p className="mt-2 text-sm text-slate-600">{contactInfo.responseTime}</p>
             </div>
           </div>
           <div className="mt-8 rounded-[28px] border border-[var(--line)] bg-white/80 p-6">
