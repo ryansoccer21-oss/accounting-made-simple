@@ -1,7 +1,6 @@
-import Image from "next/image";
 import PageHero from "../../components/page-hero";
 import SocialLinks from "../../components/social-links";
-import { aboutHighlights, profileImageUrl } from "../../lib/site-data";
+import { aboutHighlights } from "../../lib/site-data";
 
 export const metadata = {
   title: "About"
@@ -21,13 +20,10 @@ export default function AboutPage() {
         <aside className="surface-card overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(29,77,108,0.08),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(223,234,241,0.5))] p-8 md:order-2">
           <div className="overflow-hidden rounded-[28px] border border-[var(--line)] bg-white/90">
             <div className="relative aspect-[4/4.7] w-full">
-              <Image
+              <img
                 alt="Ryan Parks"
-                className="object-cover"
-                fill
-                sizes="(min-width: 768px) 320px, 100vw"
-                src={profileImageUrl}
-                unoptimized
+                className="absolute inset-0 h-full w-full object-cover"
+                src="/ryan-parks-photo.svg"
               />
             </div>
           </div>
