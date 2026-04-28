@@ -18,12 +18,15 @@ export default function AboutPage() {
 
       <section className="site-shell section-gap grid gap-4 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
         <aside className="surface-card overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(29,77,108,0.08),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(223,234,241,0.5))] p-8 md:order-2">
-          <div className="overflow-hidden rounded-[28px] border border-[var(--line)] bg-white/90">
-            <img
-              alt="Ryan Parks"
-              className="block h-auto w-full"
-              src="/ryan-parks-photo.svg"
-            />
+          <div className="rounded-[28px] border border-[var(--line)] bg-white/90 p-6">
+            <p className="eyebrow">About Ryan</p>
+            <h2 className="text-3xl font-semibold text-slate-900">
+              Clear support that meets people where they are
+            </h2>
+            <p className="mt-4 leading-8 text-slate-600">
+              Sessions are designed to feel calm, practical, and approachable for students,
+              beginners, and young adults who want help without feeling overwhelmed.
+            </p>
           </div>
           <div className="mt-6 rounded-[28px] border border-[var(--line)] bg-white/90 p-5">
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
