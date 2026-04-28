@@ -77,7 +77,7 @@ export default function HomeHero() {
               <img
                 alt="Ryan Parks"
                 className="block h-auto w-full"
-                src="/ryan-parks.jpg"
+                src="/ryan-parks-photo.svg"
               />
               <div className="p-5">
                 <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
