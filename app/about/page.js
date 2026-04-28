@@ -22,7 +22,7 @@ export default function AboutPage() {
             <img
               alt="Ryan Parks"
               className="block h-auto w-full"
-              src="/ryan-parks.jpg"
+              src="/ryan-parks-photo.svg"
             />
           </div>
           <div className="mt-6 rounded-[28px] border border-[var(--line)] bg-white/90 p-5">
