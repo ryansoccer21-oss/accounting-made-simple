@@ -1,4 +1,3 @@
-import Image from "next/image";
 import PageHero from "../../components/page-hero";
 import SocialLinks from "../../components/social-links";
 import { aboutHighlights } from "../../lib/site-data";
@@ -19,18 +18,6 @@ export default function AboutPage() {
 
       <section className="site-shell section-gap grid gap-4 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
         <aside className="surface-card overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(29,77,108,0.08),transparent_26%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(223,234,241,0.5))] p-8 md:order-2">
-          <div className="overflow-hidden rounded-[28px] border border-[var(--line)] bg-white/90">
-            <div className="relative aspect-[4/5] w-full bg-slate-100">
-              <Image
-                alt="Ryan Parks"
-                className="object-cover object-center"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, 360px"
-                src="/images/ryan-profile-photo.jpg"
-              />
-            </div>
-          </div>
           <div className="rounded-[28px] border border-[var(--line)] bg-white/90 p-6">
             <p className="eyebrow">About Ryan</p>
             <h2 className="text-3xl font-semibold text-slate-900">
