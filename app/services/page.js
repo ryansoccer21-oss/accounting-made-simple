@@ -22,6 +22,49 @@ export default function ServicesPage() {
         <ServiceGrid items={services} />
       </section>
 
+      <section className="site-shell pb-12">
+        <article className="surface-card p-8 md:p-10">
+          <p className="eyebrow">More Ways To Find Help</p>
+          <h2 className="section-title max-w-[15ch] text-4xl md:text-5xl">
+            Dedicated pages for local and subject-specific tutoring
+          </h2>
+          <p className="section-copy mt-5 max-w-3xl">
+            If you are looking for something more specific, these pages make it easier to find the
+            kind of support that fits what you need.
+          </p>
+          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <Link
+              className="surface-card bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,244,236,0.92))] p-6 transition hover:-translate-y-1"
+              href="/accounting-tutor-southern-new-hampshire"
+            >
+              <p className="eyebrow mb-2">Region</p>
+              <h3 className="text-xl font-semibold text-slate-900">Accounting Tutor in Southern New Hampshire</h3>
+            </Link>
+            <Link
+              className="surface-card bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,244,236,0.92))] p-6 transition hover:-translate-y-1"
+              href="/accounting-tutor-massachusetts"
+            >
+              <p className="eyebrow mb-2">Region</p>
+              <h3 className="text-xl font-semibold text-slate-900">Accounting Tutor in Massachusetts</h3>
+            </Link>
+            <Link
+              className="surface-card bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,244,236,0.92))] p-6 transition hover:-translate-y-1"
+              href="/excel-tutor"
+            >
+              <p className="eyebrow mb-2">Subject</p>
+              <h3 className="text-xl font-semibold text-slate-900">Excel Tutor</h3>
+            </Link>
+            <Link
+              className="surface-card bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,244,236,0.92))] p-6 transition hover:-translate-y-1"
+              href="/quickbooks-tutor"
+            >
+              <p className="eyebrow mb-2">Subject</p>
+              <h3 className="text-xl font-semibold text-slate-900">QuickBooks Tutor</h3>
+            </Link>
+          </div>
+        </article>
+      </section>
+
       <PricingBooking />
 
       <section className="site-shell pb-12">
