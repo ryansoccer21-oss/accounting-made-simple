@@ -5,7 +5,11 @@ export default function sitemap() {
     "",
     "/about",
     "/services",
+    "/accounting-tutor-southern-new-hampshire",
+    "/accounting-tutor-massachusetts",
+    "/excel-tutor",
     "/local-college-accounting-tutoring",
+    "/quickbooks-tutor",
     "/resources",
     "/faq",
     "/contact"
