@@ -5,6 +5,7 @@ export default function sitemap() {
     "",
     "/about",
     "/services",
+    "/local-college-accounting-tutoring",
     "/resources",
     "/faq",
     "/contact"
