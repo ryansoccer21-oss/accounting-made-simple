@@ -1,6 +1,7 @@
 import PageHero from "../../components/page-hero";
 import PricingBooking from "../../components/pricing-booking";
 import ServiceGrid from "../../components/service-grid";
+import Link from "next/link";
 import { serviceTopics, services } from "../../lib/site-data";
 
 export const metadata = {
@@ -22,6 +23,25 @@ export default function ServicesPage() {
       </section>
 
       <PricingBooking />
+
+      <section className="site-shell pb-12">
+        <article className="surface-card bg-[radial-gradient(circle_at_top_left,rgba(29,77,108,0.12),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.99),rgba(223,234,241,0.55))] p-8 md:p-10">
+          <p className="eyebrow">Local College Tutoring</p>
+          <h2 className="section-title max-w-[15ch] text-4xl md:text-5xl">
+            Accounting support for local college and community college students
+          </h2>
+          <p className="section-copy mt-5 max-w-3xl">
+            If you want a page built specifically for college students in Southern New Hampshire
+            and Massachusetts, there is now a dedicated local tutoring page with school-specific
+            details, pricing, and booking information.
+          </p>
+          <div className="mt-8 flex">
+            <Link className="cta-primary" href="/local-college-accounting-tutoring">
+              View Local College Tutoring Page
+            </Link>
+          </div>
+        </article>
+      </section>
 
       <section className="site-shell pb-16">
         <article className="surface-card overflow-hidden md:grid md:grid-cols-[minmax(0,1fr)_300px]">
