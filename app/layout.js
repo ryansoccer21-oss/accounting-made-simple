@@ -19,7 +19,10 @@ export const metadata = {
     template: "%s | Accounting Made Simple"
   },
   description:
-    "Beginner-friendly tutoring for accounting, Excel, budgeting, and money basics."
+    "Beginner-friendly tutoring for accounting, Excel, budgeting, and money basics.",
+  verification: {
+    google: "D2huXCuKLA6FNscmIWlajy08ovtAwP9v9yrp8Zg96RI"
+  }
 };
 
 export default function RootLayout({ children }) {
