@@ -6,7 +6,7 @@ import PricingBooking from "../components/pricing-booking";
 import SectionHeading from "../components/section-heading";
 import ServiceGrid from "../components/service-grid";
 import Testimonials from "../components/testimonials";
-import { approachCards, heroBadges, services, trustPoints } from "../lib/site-data";
+import { approachCards, heroBadges, landingPages, services, trustPoints } from "../lib/site-data";
 
 export default function HomePage() {
   return (
@@ -39,6 +39,31 @@ export default function HomePage() {
           <Link className="cta-secondary" href="/services">
             See All Services
           </Link>
+        </div>
+      </section>
+
+      <section className="site-shell pb-12">
+        <SectionHeading
+          eyebrow="Popular Tutoring Pages"
+          title="A few focused pages if you already know what kind of help you want"
+          copy="These pages make it easier to jump straight to the tutoring topic or area that fits you best."
+        />
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {landingPages.map((page) => (
+            <Link
+              key={page.href}
+              className="surface-card bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,244,236,0.92))] p-6 transition hover:-translate-y-1 hover:shadow-[0_28px_58px_rgba(15,23,42,0.1)]"
+              href={page.href}
+            >
+              <p className="eyebrow mb-3">{page.label}</p>
+              <h2 className="text-2xl font-semibold text-slate-900">{page.title}</h2>
+              <p className="mt-4 leading-7 text-slate-600">{page.copy}</p>
+              <div className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[color:var(--brand)]">
+                Open page
+                <span aria-hidden="true">→</span>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
