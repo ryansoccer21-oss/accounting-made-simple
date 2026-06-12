@@ -43,12 +43,29 @@ export default function SiteHeader() {
           >
             {navLinks.map((link) => {
               const active = pathname === link.href;
+              const className = `text-sm font-semibold transition ${
+                active ? "text-[color:var(--brand)]" : "text-slate-500 hover:text-[color:var(--brand)]"
+              }`;
+
+              if (link.external) {
+                return (
+                  <a
+                    key={link.href}
+                    className={className}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    {link.label}
+                  </a>
+                );
+              }
+
               return (
                 <Link
                   key={link.href}
-                  className={`text-sm font-semibold transition ${
-                    active ? "text-[color:var(--brand)]" : "text-slate-500 hover:text-[color:var(--brand)]"
-                  }`}
+                  className={className}
                   href={link.href}
                   onClick={() => setOpen(false)}
                 >
