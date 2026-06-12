@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { contactInfo, heroBadges, serviceTopics, whoIHelp } from "../lib/site-data";
+import { contactInfo, heroBadges, quizCenterUrl, serviceTopics, whoIHelp } from "../lib/site-data";
 
 export default function HomeHero() {
   return (
@@ -43,11 +43,22 @@ export default function HomeHero() {
             >
               Schedule Your Session
             </a>
+            <a
+              className="cta-secondary"
+              href={quizCenterUrl}
+              rel="noreferrer"
+              target="_blank"
+            >
+              Free Quiz Center
+            </a>
             <Link className="cta-secondary" href="/services">
               Explore Services
             </Link>
           </div>
-          <p className="mt-4 text-sm font-semibold text-slate-600">
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
+            Practice accounting, Excel, bookkeeping, and personal finance with free quizzes and instant explanations.
+          </p>
+          <p className="mt-2 text-sm font-semibold text-slate-600">
             First session is free. Book a time that works for you.
           </p>
           <div className="mt-10 grid gap-4 border-t border-[color:var(--line)] pt-6 sm:grid-cols-3">
