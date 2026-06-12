@@ -38,7 +38,7 @@ export default function HomeHero() {
             <a
               className="cta-primary"
               href={contactInfo.bookingUrl}
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Schedule Your Session
@@ -46,7 +46,7 @@ export default function HomeHero() {
             <a
               className="cta-secondary"
               href={quizCenterUrl}
-              rel="noreferrer"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Free Quiz Center
