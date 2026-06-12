@@ -40,7 +40,7 @@ export default function SiteFooter() {
                   key={link.href}
                   className="transition hover:text-[color:var(--brand)]"
                   href={link.href}
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   {link.label}
