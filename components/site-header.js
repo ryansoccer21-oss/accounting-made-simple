@@ -54,7 +54,7 @@ export default function SiteHeader() {
                     className={className}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     target="_blank"
                   >
                     {link.label}
