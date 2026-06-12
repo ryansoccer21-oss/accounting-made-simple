@@ -33,11 +33,27 @@ export default function SiteFooter() {
           </div>
         </div>
         <nav className="mt-5 flex flex-wrap gap-5 text-sm text-slate-500 md:mt-0" aria-label="Footer">
-          {navLinks.map((link) => (
-            <Link key={link.href} className="transition hover:text-[color:var(--brand)]" href={link.href}>
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            if (link.external) {
+              return (
+                <a
+                  key={link.href}
+                  className="transition hover:text-[color:var(--brand)]"
+                  href={link.href}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  {link.label}
+                </a>
+              );
+            }
+
+            return (
+              <Link key={link.href} className="transition hover:text-[color:var(--brand)]" href={link.href}>
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </footer>
