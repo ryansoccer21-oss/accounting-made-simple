@@ -2,6 +2,7 @@ import "./globals.css";
 import { DM_Sans, Fraunces } from "next/font/google";
 import SiteFooter from "../components/site-footer";
 import SiteHeader from "../components/site-header";
+import { Analytics } from "@vercel/analytics/next";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
