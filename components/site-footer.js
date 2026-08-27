@@ -2,6 +2,12 @@ import Link from "next/link";
 import SocialLinks from "./social-links";
 import { contactInfo, navLinks } from "../lib/site-data";
 
+const utilityLinks = [
+  { href: "/resources", label: "Resources" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" }
+];
+
 export default function SiteFooter() {
   return (
     <footer className="pb-10 pt-4">
@@ -24,8 +30,13 @@ export default function SiteFooter() {
         </div>
 
         <div className="mt-6 md:mt-0 md:text-right">
-          <nav className="flex flex-wrap gap-5 text-sm text-slate-500 md:justify-end" aria-label="Footer">
+          <nav className="flex flex-wrap gap-5 text-sm text-slate-500 md:justify-end" aria-label="Primary footer navigation">
             {navLinks.map((link) => (
+              <Link key={link.href} className="transition hover:text-[color:var(--brand)]" href={link.href}>{link.label}</Link>
+            ))}
+          </nav>
+          <nav className="mt-3 flex flex-wrap gap-5 text-sm text-slate-500 md:justify-end" aria-label="Secondary footer navigation">
+            {utilityLinks.map((link) => (
               <Link key={link.href} className="transition hover:text-[color:var(--brand)]" href={link.href}>{link.label}</Link>
             ))}
           </nav>
