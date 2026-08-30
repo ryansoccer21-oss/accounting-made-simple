@@ -4,6 +4,7 @@ import { contactInfo, navLinks } from "../lib/site-data";
 
 const utilityLinks = [
   { href: "/skill-check", label: "Skill Check" },
+  { href: "/skill-map", label: "Skill Map" },
   { href: "/resources", label: "Resources" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" }
