@@ -3,6 +3,7 @@ import SocialLinks from "./social-links";
 import { contactInfo, navLinks } from "../lib/site-data";
 
 const utilityLinks = [
+  { href: "/skill-check", label: "Skill Check" },
   { href: "/resources", label: "Resources" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" }
