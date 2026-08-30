@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SectionHeading from "./section-heading";
 import { contactInfo, policyGroups, pricingOptions } from "../lib/site-data";
 
@@ -64,7 +65,10 @@ export default function PricingBooking() {
             <a className="cta-primary" href={contactInfo.bookingUrl} rel="noreferrer" target="_blank">
               Book a Free 30-Minute Session
             </a>
-            <a className="cta-secondary" href={`mailto:${contactInfo.email}?subject=Accounting%20Tutoring%20Question`}>
+            <Link className="cta-secondary" href="/skill-check">
+              See How the Skill Check Works
+            </Link>
+            <a className="text-center text-sm font-semibold text-[color:var(--brand)]" href={`mailto:${contactInfo.email}?subject=Accounting%20Tutoring%20Question`}>
               Ask a Question First
             </a>
           </div>
