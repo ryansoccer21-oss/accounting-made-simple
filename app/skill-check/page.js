@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PageHero from "../../components/page-hero";
 import SkillCheckTool from "../../components/skill-check-tool";
 import { contactInfo } from "../../lib/site-data";
@@ -70,10 +71,11 @@ export default function SkillCheckPage() {
               </p>
             </div>
             <div className="flex flex-col gap-3">
+              <Link className="cta-secondary" href="/skill-map">Open the AMS Skill Map</Link>
               <a className="cta-primary" href={contactInfo.bookingUrl} rel="noopener noreferrer" target="_blank">
                 Book a Free 30-Minute Session
               </a>
-              <a className="cta-secondary" href={`mailto:${contactInfo.email}?subject=Accounting%20Skill%20Check`}>
+              <a className="text-center text-sm font-semibold text-[color:var(--brand)]" href={`mailto:${contactInfo.email}?subject=Accounting%20Skill%20Check`}>
                 Ask a Question First
               </a>
             </div>
