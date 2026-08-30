@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --surface: #fffdf9;
-  --surface-soft: #f4eee2;
-  --line: rgba(148, 163, 184, 0.2);
-  --ink-soft: #4c5f56;
+  --surface: #ffffff;
+  --surface-soft: #f3f7fa;
+  --line: rgba(29, 77, 108, 0.16);
+  --ink-soft: #52606d;
   --brand: #1d4d6c;
   --brand-dark: #12364d;
-  --warm: #b16d3b;
-  --mint: #5f7c59;
+  --warm: #2f91a0;
+  --mint: #66b8c3;
 }
 
 html {

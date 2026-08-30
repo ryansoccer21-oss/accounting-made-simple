@@ -1,199 +1,107 @@
 import Link from "next/link";
-import { contactInfo, heroBadges, quizCenterUrl, serviceTopics, whoIHelp } from "../lib/site-data";
+import { amsMethod, contactInfo, heroBadges, quizCenterUrl, serviceTopics, whoIHelp } from "../lib/site-data";
 
 export default function HomeHero() {
   return (
     <section className="site-shell section-gap pb-10">
-      <div className="grid gap-4 lg:items-start lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)]">
-        <article className="surface-card relative overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(29,77,108,0.12),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(177,109,59,0.08),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,253,249,1))] p-8 md:p-12">
-          <div className="absolute right-6 top-6 hidden h-24 w-24 rounded-full border border-white/60 bg-[radial-gradient(circle,rgba(255,255,255,0.85),rgba(255,255,255,0))] lg:block" />
+      <div className="grid gap-4 lg:items-start lg:grid-cols-[minmax(0,1.18fr)_minmax(320px,0.82fr)]">
+        <article className="surface-card relative overflow-hidden bg-[radial-gradient(circle_at_top_right,rgba(29,77,108,0.13),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(47,145,160,0.10),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.99),rgba(247,251,253,1))] p-8 md:p-12">
           <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--line)] bg-white/90 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[color:var(--brand)]">
             <span className="size-2 rounded-full bg-[color:var(--mint)]" />
-            Made Simple Tutoring
+            Accounting Made Simple
           </div>
-          <div className="mt-4 inline-flex rounded-full bg-[color:var(--brand)] px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white">
-            First session free
-          </div>
-          <h1 className="mt-6 max-w-[11ch] font-serif text-5xl font-semibold leading-[0.95] md:text-7xl">
-            Clear tutoring for accounting, Excel, and money basics
+
+          <p className="mt-6 text-sm font-bold uppercase tracking-[0.2em] text-[color:var(--warm)]">
+            From Classroom to Career.
+          </p>
+          <h1 className="mt-3 max-w-[11ch] font-serif text-5xl font-semibold leading-[0.96] md:text-7xl">
+            Accounting & Excel Tutoring
           </h1>
           <p className="section-copy mt-6 max-w-2xl text-lg md:text-xl">
-            Friendly help for students, beginners, and young adults who want less stress,
-            clearer explanations, and a better understanding of the material.
+            Understand accounting. Build practical Excel skills. Learn how classroom concepts connect to real accounting work.
           </p>
-          <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-[color:var(--brand)]">
-            Recent UMass Lowell graduate with an accounting concentration
+          <p className="mt-4 max-w-2xl leading-7 text-slate-600">
+            One-on-one tutoring for college accounting students, with support for adult learners and career changers who want stronger accounting foundations and practical spreadsheet skills.
           </p>
+
           <div className="mt-6 flex flex-wrap gap-3">
             {heroBadges.map((badge) => (
-              <span
-                key={badge}
-                className="rounded-full border border-[color:var(--line)] bg-white/85 px-4 py-2 text-sm font-semibold text-[color:var(--brand)]"
-              >
+              <span key={badge} className="rounded-full border border-[color:var(--line)] bg-white/90 px-4 py-2 text-sm font-semibold text-[color:var(--brand)]">
                 {badge}
               </span>
             ))}
           </div>
+
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              className="cta-primary"
-              href={contactInfo.bookingUrl}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Schedule Your Session
+            <a className="cta-primary" href={contactInfo.bookingUrl} rel="noopener noreferrer" target="_blank">
+              Book a Free 30-Minute Session
             </a>
-            <a
-              className="cta-secondary"
-              href={quizCenterUrl}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
+            <Link className="cta-secondary" href="/accounting">
+              Explore Accounting Tutoring
+            </Link>
+            <a className="cta-secondary" href={quizCenterUrl} rel="noopener noreferrer" target="_blank">
               Free Quiz Center
             </a>
-            <Link className="cta-secondary" href="/services">
-              Explore Services
-            </Link>
           </div>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
-            Practice accounting, Excel, bookkeeping, and personal finance with free quizzes and instant explanations.
-          </p>
-          <p className="mt-2 text-sm font-semibold text-slate-600">
-            First session is free. Book a time that works for you.
-          </p>
+
           <div className="mt-10 grid gap-4 border-t border-[color:var(--line)] pt-6 sm:grid-cols-3">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--warm)]">
-                Focus
-              </p>
-              <p className="mt-2 text-base font-semibold text-slate-900">Accounting and Excel support</p>
+              <p className="eyebrow">Accounting</p>
+              <p className="mt-2 font-semibold text-slate-900">Financial through Advanced</p>
             </div>
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--warm)]">
-                Style
-              </p>
-              <p className="mt-2 text-base font-semibold text-slate-900">Simple, patient, and organized</p>
+              <p className="eyebrow">Excel</p>
+              <p className="mt-2 font-semibold text-slate-900">Built around accounting tasks</p>
             </div>
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--warm)]">
-                Contact
-              </p>
-              <a className="mt-2 block text-base font-semibold text-[color:var(--brand)]" href={`mailto:${contactInfo.email}`}>
-                {contactInfo.email}
-              </a>
-              <p className="mt-2 text-sm text-slate-600">{contactInfo.responseTime}</p>
-            </div>
-          </div>
-          <div className="mt-8 rounded-[28px] border border-[var(--line)] bg-white/80 p-6">
-            <p className="eyebrow">A Good Fit If You Need</p>
-            <div className="mt-4 grid gap-3 sm:grid-cols-2">
-              {[
-                "Homework help without feeling rushed",
-                "Exam review with clear walkthroughs",
-                "Excel support for school or work",
-                "Simple help with budgeting and money basics"
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-[22px] border border-[var(--line)] bg-[color:var(--surface)] px-4 py-3 text-sm font-medium leading-6 text-slate-700"
-                >
-                  {item}
-                </div>
-              ))}
+              <p className="eyebrow">Availability</p>
+              <p className="mt-2 font-semibold text-slate-900">Mon–Thu evenings + weekends</p>
             </div>
           </div>
         </article>
 
         <aside className="grid gap-4">
-          <div className="surface-card overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(177,109,59,0.12),transparent_26%),linear-gradient(180deg,rgba(228,237,243,0.88),rgba(255,253,249,0.98))] p-6">
-            <div className="mb-4 rounded-[28px] border border-[var(--line)] bg-white/90 p-6">
-              <p className="eyebrow">Personal Support</p>
-              <h2 className="text-2xl font-semibold text-slate-900">
-                Sessions that fit different learning styles and comfort levels
-              </h2>
-              <p className="mt-4 leading-8 text-slate-600">
-                Support is built for students, beginners, young adults, and anyone who wants
-                patient explanations, steady guidance, and a pace that feels manageable.
-              </p>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                {[
-                  "Beginner-friendly from the start",
-                  "Clear step-by-step explanations",
-                  "Flexible help for school and real life",
-                  "A calm space to ask questions"
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-[22px] border border-[var(--line)] bg-[color:var(--surface)] px-4 py-3 text-sm font-medium leading-6 text-slate-700"
-                  >
-                    {item}
+          <div className="surface-card bg-[linear-gradient(180deg,rgba(29,77,108,0.98),rgba(18,54,77,0.98))] p-7 text-white">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">The AMS Method</p>
+            <h2 className="mt-3 font-serif text-3xl font-semibold">Understand → Work → Apply → Master</h2>
+            <div className="mt-6 grid gap-3">
+              {amsMethod.map((step) => (
+                <div key={step.title} className="rounded-3xl border border-white/15 bg-white/8 p-4">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <p className="font-semibold">{step.title}</p>
+                    <span className="text-xs font-bold tracking-[0.18em] text-white/55">{step.label}</span>
                   </div>
-                ))}
-              </div>
+                  <p className="mt-1 text-sm text-white/78">{step.short}</p>
+                </div>
+              ))}
             </div>
-            <div className="rounded-[28px] border border-[var(--line)] bg-white/85 p-5">
-              <p className="eyebrow">Session Focus</p>
-              <h2 className="text-2xl font-semibold text-slate-900">What you can get help with</h2>
-              <ul className="mt-4 grid gap-3">
-                {serviceTopics.map((topic) => (
-                  <li key={topic} className="flex items-start gap-3 text-slate-600">
-                    <span className="mt-2 size-2 rounded-full bg-[color:var(--brand)]" />
-                    <span>{topic}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mt-4 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[28px] border border-[var(--line)] bg-white/88 p-5">
-                <p className="eyebrow">Best For</p>
-                <p className="text-lg font-semibold text-slate-900">
-                  Students, beginners, and young adults
-                </p>
-                <p className="mt-3 text-sm leading-7 text-slate-600">
-                  Built for people who want patient support without feeling lost or rushed.
-                </p>
-              </div>
-              <div className="rounded-[28px] border border-slate-800/10 bg-[linear-gradient(180deg,rgba(29,77,108,0.96),rgba(18,54,77,0.96))] p-5 text-white">
-                <p className="eyebrow text-white/75">Approach</p>
-                <p className="text-lg font-semibold leading-7">
-                  Clear explanation first, practice second, confidence after that
-                </p>
-              </div>
-            </div>
+            <p className="mt-6 text-sm leading-7 text-white/78">
+              The goal is not to solve one problem for you. It is to help you solve the next one yourself.
+            </p>
           </div>
 
-          <div className="surface-card bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(244,238,226,0.96))] p-6">
+          <div className="surface-card p-6">
+            <p className="eyebrow">Subjects</p>
+            <h2 className="text-2xl font-semibold text-slate-900">What you can get help with</h2>
+            <ul className="mt-4 grid gap-3">
+              {serviceTopics.map((topic) => (
+                <li key={topic} className="flex items-start gap-3 text-slate-600">
+                  <span className="mt-2 size-2 rounded-full bg-[color:var(--brand)]" />
+                  <span>{topic}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="surface-card p-6">
             <p className="eyebrow">Who I Help</p>
-            <div className="mb-6 grid gap-3">
+            <div className="mt-4 grid gap-3">
               {whoIHelp.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-[24px] border border-[var(--line)] bg-white/85 px-4 py-4 text-sm leading-7 text-slate-700"
-                >
+                <div key={item} className="rounded-3xl border border-[var(--line)] bg-[color:var(--surface)] px-4 py-3 text-sm leading-6 text-slate-700">
                   {item}
                 </div>
               ))}
             </div>
-            <p className="eyebrow">How It Works</p>
-            <div className="grid gap-3">
-              {[
-                "Reach out with the topic you need help with",
-                "Get a simple plan for where to start",
-                "Work through it step by step"
-              ].map((step, index) => (
-                <div
-                  key={step}
-                  className="rounded-[24px] border border-[var(--line)] bg-white/85 px-4 py-4 text-sm leading-7 text-slate-700"
-                >
-                  <span className="mr-3 font-bold text-[color:var(--brand)]">{index + 1}.</span>
-                  {step}
-                </div>
-              ))}
-            </div>
-            <Link className="mt-5 inline-flex text-sm font-bold text-[color:var(--brand)]" href="/contact">
-              Contact Ryan
-            </Link>
           </div>
         </aside>
       </div>

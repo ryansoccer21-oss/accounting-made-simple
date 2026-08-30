@@ -1,18 +1,18 @@
-const baseUrl = "https://accounting-made-simple.vercel.app";
+const baseUrl = "https://accounting-made-simple-rho.vercel.app";
 
 export default function sitemap() {
   return [
     "",
-    "/about",
-    "/services",
-    "/accounting-tutor-southern-new-hampshire",
-    "/accounting-tutor-massachusetts",
+    "/accounting",
     "/excel-tutor",
-    "/local-college-accounting-tutoring",
-    "/quickbooks-tutor",
+    "/pricing",
+    "/about",
+    "/contact",
     "/resources",
     "/faq",
-    "/contact"
+    "/accounting-tutor-southern-new-hampshire",
+    "/accounting-tutor-massachusetts",
+    "/local-college-accounting-tutoring"
   ].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date()

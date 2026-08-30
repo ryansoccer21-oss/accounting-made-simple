@@ -5,8 +5,13 @@ import HomeHero from "../components/home-hero";
 import PricingBooking from "../components/pricing-booking";
 import SectionHeading from "../components/section-heading";
 import ServiceGrid from "../components/service-grid";
-import Testimonials from "../components/testimonials";
-import { approachCards, heroBadges, landingPages, services, trustPoints } from "../lib/site-data";
+import { amsMethod, excelWorkbooks, landingPages, services, trustPoints } from "../lib/site-data";
+
+export const metadata = {
+  title: "Accounting & Excel Tutoring",
+  description:
+    "Accounting and accounting-focused Excel tutoring for college students, adult learners, and career changers. Learn concepts, solve problems independently, and connect classwork to practical accounting skills."
+};
 
 export default function HomePage() {
   return (
@@ -15,10 +20,7 @@ export default function HomePage() {
 
       <section className="site-shell grid gap-4 md:grid-cols-3">
         {trustPoints.map((point, index) => (
-          <article
-            key={point.title}
-            className="surface-card bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,244,236,0.92))] p-6"
-          >
+          <article key={point.title} className="surface-card bg-white/95 p-6">
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-[color:var(--warm)]">
               {String(index + 1).padStart(2, "0")}
             </p>
@@ -30,38 +32,65 @@ export default function HomePage() {
 
       <section className="site-shell section-gap">
         <SectionHeading
-          eyebrow="Services"
-          title="Practical support that is easy to scan and easy to understand"
-          copy="Support is available for school, everyday money skills, and the topics that tend to feel the most confusing."
+          eyebrow="Focused Support"
+          title="Accounting first. Excel built around accounting."
+          copy="AMS is intentionally focused on accounting learning and practical spreadsheet skills instead of trying to cover every business or personal-finance topic."
         />
-        <ServiceGrid items={services.slice(0, 4)} />
-        <div className="mt-8 flex">
-          <Link className="cta-secondary" href="/services">
-            See All Services
-          </Link>
+        <ServiceGrid items={services} />
+      </section>
+
+      <section className="site-shell pb-16">
+        <div className="surface-card p-8 md:p-10">
+          <SectionHeading
+            eyebrow="The AMS Method"
+            title="A repeatable way to move from confusion to independent problem solving"
+            copy="Every stage has a purpose, so tutoring is more than watching someone else solve the problem."
+          />
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {amsMethod.map((step) => (
+              <article key={step.title} className="rounded-[28px] border border-[var(--line)] bg-[color:var(--surface)] p-6">
+                <p className="eyebrow">{step.label}</p>
+                <h3 className="mt-2 text-2xl font-semibold text-slate-900">{step.title}</h3>
+                <p className="mt-2 font-semibold text-[color:var(--brand)]">{step.short}</p>
+                <p className="mt-4 leading-7 text-slate-600">{step.copy}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="site-shell pb-12">
+      <section className="site-shell pb-16">
         <SectionHeading
-          eyebrow="Popular Tutoring Pages"
-          title="A few focused pages if you already know what kind of help you want"
-          copy="These pages make it easier to jump straight to the tutoring topic or area that fits you best."
+          eyebrow="Accounting Excel"
+          title="Learn Excel through realistic accounting tasks"
+          copy="Instead of isolated formulas, practice spreadsheet skills through fictional accounting examples that show how the tools are actually used."
         />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {excelWorkbooks.map((item) => (
+            <div key={item} className="surface-card p-6">
+              <p className="eyebrow">Practice Workbook</p>
+              <h3 className="mt-2 text-xl font-semibold text-slate-900">{item}</h3>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 flex">
+          <Link className="cta-secondary" href="/excel-tutor">Explore Excel for Accounting</Link>
+        </div>
+      </section>
+
+      <section className="site-shell pb-16">
+        <SectionHeading
+          eyebrow="Explore"
+          title="Find the tutoring path that fits what you need"
+          copy="Start with accounting, Excel, or a local tutoring page if location matters."
+        />
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {landingPages.map((page) => (
-            <Link
-              key={page.href}
-              className="surface-card bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(248,244,236,0.92))] p-6 transition hover:-translate-y-1 hover:shadow-[0_28px_58px_rgba(15,23,42,0.1)]"
-              href={page.href}
-            >
+            <Link key={page.href} className="surface-card p-6 transition hover:-translate-y-1" href={page.href}>
               <p className="eyebrow mb-3">{page.label}</p>
               <h2 className="text-2xl font-semibold text-slate-900">{page.title}</h2>
               <p className="mt-4 leading-7 text-slate-600">{page.copy}</p>
-              <div className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[color:var(--brand)]">
-                Open page
-                <span aria-hidden="true">→</span>
-              </div>
+              <span className="mt-6 inline-flex text-sm font-bold text-[color:var(--brand)]">Open page →</span>
             </Link>
           ))}
         </div>
@@ -69,43 +98,9 @@ export default function HomePage() {
 
       <PricingBooking />
 
-      <section className="site-shell grid gap-4 pb-16 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,0.8fr)]">
-        <article className="surface-card bg-[radial-gradient(circle_at_top_right,rgba(177,109,59,0.08),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,253,249,1))] p-8">
-          <p className="eyebrow">What You Can Expect</p>
-          <h2 className="section-title max-w-[13ch] text-4xl md:text-5xl">
-            Support that feels clear, patient, and easier to keep up with
-          </h2>
-          <p className="section-copy mt-5 max-w-2xl">
-            Sessions are designed to help you understand the material, ask questions comfortably,
-            and move forward without feeling rushed or overwhelmed.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {heroBadges.map((badge) => (
-              <span
-                key={badge}
-                className="rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-[color:var(--brand)]"
-              >
-                {badge}
-              </span>
-            ))}
-          </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {approachCards.map((card) => (
-              <div key={card.title} className="rounded-3xl border border-[var(--line)] bg-white/80 p-5">
-                <div className="mb-4 inline-flex size-12 items-center justify-center rounded-2xl bg-slate-100 text-xs font-bold tracking-[0.18em] text-[color:var(--brand)]">
-                  {card.label}
-                </div>
-                <h3 className="text-lg font-semibold text-slate-900">{card.title}</h3>
-                <p className="mt-2 leading-7 text-slate-600">{card.copy}</p>
-              </div>
-            ))}
-          </div>
-        </article>
-
+      <section className="site-shell pb-16">
         <FaqPreview />
       </section>
-
-      <Testimonials />
 
       <CtaBand />
     </>
