@@ -1,0 +1,10 @@
+Department,Account,Budget,Actual
+Operations,Supplies,4200.00,4680.00
+Operations,Repairs and Maintenance,7500.00,6940.00
+Operations,Freight,5200.00,5875.00
+Sales,Travel,6800.00,7315.00
+Sales,Meals and Entertainment,2400.00,1985.00
+Sales,Software,3600.00,3725.00
+Corporate,Professional Fees,9000.00,8420.00
+Corporate,Office Expense,3100.00,3445.00
+Corporate,Training,2500.00,2175.00
