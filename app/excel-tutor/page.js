@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CtaBand from "../../components/cta-band";
 import PageHero from "../../components/page-hero";
 import PricingBooking from "../../components/pricing-booking";
@@ -62,6 +63,9 @@ export default function ExcelTutorPage() {
               <h3 className="mt-2 text-xl font-semibold text-slate-900">{item}</h3>
             </article>
           ))}
+        </div>
+        <div className="mt-8 flex">
+          <Link className="cta-primary" href="/excel-practice">Open the First 3 Excel Practice Exercises</Link>
         </div>
       </section>
 
