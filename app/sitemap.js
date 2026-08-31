@@ -7,6 +7,7 @@ export default function sitemap() {
     "/excel-tutor",
     "/skill-check",
     "/skill-map",
+    "/session-recap",
     "/pricing",
     "/about",
     "/contact",
