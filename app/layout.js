@@ -18,9 +18,6 @@ export const metadata = {
     template: "%s | Accounting Made Simple"
   },
   description: siteDescription,
-  alternates: {
-    canonical: "/"
-  },
   openGraph: {
     type: "website",
     url: siteUrl,
