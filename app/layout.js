@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/next";
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-body" });
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-display" });
 
-const siteUrl = "https://accounting-made-simple-rho.vercel.app";
+const siteUrl = "https://accounting-made-simple.vercel.app";
 const siteDescription =
   "One-on-one accounting and accounting-focused Excel tutoring for college students, adult learners, and career changers. From Classroom to Career.";
 

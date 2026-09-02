@@ -1,4 +1,4 @@
-const baseUrl = "https://accounting-made-simple-rho.vercel.app";
+const baseUrl = "https://accounting-made-simple.vercel.app";
 
 export default function sitemap() {
   return [

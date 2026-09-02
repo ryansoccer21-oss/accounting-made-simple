@@ -4,6 +4,17 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "accounting-made-simple-rho.vercel.app"
+          }
+        ],
+        destination: "https://accounting-made-simple.vercel.app/:path*",
+        permanent: true
+      },
+      {
         source: "/resources/general-personal-finance-tips.html",
         destination: "/resources",
         permanent: true
