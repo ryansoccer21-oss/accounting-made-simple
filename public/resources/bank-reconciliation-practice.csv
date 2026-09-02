@@ -1,0 +1,10 @@
+Type,Date,Description,Amount
+Book Balance,2026-08-31,General ledger cash balance,24850.00
+Bank Balance,2026-08-31,Bank statement ending balance,26340.00
+Bank Item,2026-08-31,Deposit in transit,2150.00
+Bank Item,2026-08-31,Outstanding check #1048,-1325.00
+Bank Item,2026-08-31,Outstanding check #1051,-640.00
+Book Item,2026-08-31,Bank service fee,-45.00
+Book Item,2026-08-31,Interest earned,30.00
+Book Item,2026-08-31,Customer NSF check,-420.00
+Book Item,2026-08-31,ACH customer payment,2110.00
