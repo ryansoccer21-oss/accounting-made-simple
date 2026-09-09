@@ -18,6 +18,11 @@ const diagnostics = [
     title: "Adjusting Entries Skill Check",
     href: "/adjusting-entries-skill-check",
     copy: "Test accruals, deferrals, depreciation, and financial-statement effects with 12 original performance-based questions."
+  },
+  {
+    title: "Financial Accounting Readiness",
+    href: "/financial-accounting-readiness",
+    copy: "Test your overall Financial Accounting foundation with 16 questions across transactions, reporting, assets, liabilities, equity, and cash flows."
   }
 ];
 
@@ -39,7 +44,7 @@ export default function ResourcesPage() {
             These original diagnostics score actual answers by topic, explain missed questions, and give you a clear first review priority.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {diagnostics.map((diagnostic) => (
             <Link key={diagnostic.href} className="surface-card block bg-white/95 p-7 transition hover:-translate-y-0.5 hover:shadow-[0_20px_45px_rgba(15,23,42,0.08)]" href={diagnostic.href}>
               <p className="eyebrow">Free Skill Check</p>
