@@ -8,6 +8,19 @@ export const metadata = {
     "Free Accounting Made Simple resources for accounting review, Excel shortcuts, practice quizzes, and performance-based skill checks."
 };
 
+const diagnostics = [
+  {
+    title: "Debits & Credits Skill Check",
+    href: "/debits-credits-skill-check",
+    copy: "Answer 12 accounting questions without notes, get category-level results, review explanations, and identify what to work on first."
+  },
+  {
+    title: "Adjusting Entries Skill Check",
+    href: "/adjusting-entries-skill-check",
+    copy: "Test accruals, deferrals, depreciation, and financial-statement effects with 12 original performance-based questions."
+  }
+];
+
 export default function ResourcesPage() {
   return (
     <>
@@ -20,20 +33,22 @@ export default function ResourcesPage() {
 
       <section className="site-shell section-gap">
         <div className="mb-8 max-w-3xl">
-          <p className="eyebrow">Featured Diagnostic</p>
-          <h2 className="section-title">Test your debit-and-credit reasoning</h2>
+          <p className="eyebrow">Accounting Diagnostics</p>
+          <h2 className="section-title">Test the skill instead of only rating your confidence</h2>
           <p className="section-copy mt-4">
-            The Debits & Credits Skill Check uses 12 original questions to score normal balances, routine transaction entries, and adjusting entries, then recommends a first review priority.
+            These original diagnostics score actual answers by topic, explain missed questions, and give you a clear first review priority.
           </p>
         </div>
-        <Link className="surface-card block bg-white/95 p-7 transition hover:-translate-y-0.5 hover:shadow-[0_20px_45px_rgba(15,23,42,0.08)]" href="/debits-credits-skill-check">
-          <p className="eyebrow">Free Skill Check</p>
-          <h2 className="mt-2 text-2xl font-semibold text-slate-900">Debits & Credits Skill Check</h2>
-          <p className="mt-4 max-w-3xl leading-7 text-slate-600">
-            Answer 12 accounting questions without notes, get category-level results, review explanations, and identify what to work on first.
-          </p>
-          <span className="mt-6 inline-flex text-sm font-bold text-[color:var(--brand)]">Start diagnostic →</span>
-        </Link>
+        <div className="grid gap-4 md:grid-cols-2">
+          {diagnostics.map((diagnostic) => (
+            <Link key={diagnostic.href} className="surface-card block bg-white/95 p-7 transition hover:-translate-y-0.5 hover:shadow-[0_20px_45px_rgba(15,23,42,0.08)]" href={diagnostic.href}>
+              <p className="eyebrow">Free Skill Check</p>
+              <h2 className="mt-2 text-2xl font-semibold text-slate-900">{diagnostic.title}</h2>
+              <p className="mt-4 leading-7 text-slate-600">{diagnostic.copy}</p>
+              <span className="mt-6 inline-flex text-sm font-bold text-[color:var(--brand)]">Start diagnostic →</span>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section className="site-shell pb-16">
