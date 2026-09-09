@@ -9,6 +9,7 @@ export default function sitemap() {
     "/skill-check",
     "/debits-credits-skill-check",
     "/adjusting-entries-skill-check",
+    "/financial-accounting-readiness",
     "/skill-map",
     "/session-recap",
     "/pricing",
