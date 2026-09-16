@@ -6,6 +6,7 @@ const utilityLinks = [
   { href: "/skill-check", label: "Skill Check" },
   { href: "/debits-credits-skill-check", label: "Debits & Credits Check" },
   { href: "/adjusting-entries-skill-check", label: "Adjusting Entries Check" },
+  { href: "/financial-accounting-readiness", label: "Financial Accounting Readiness" },
   { href: "/skill-map", label: "Skill Map" },
   { href: "/session-recap", label: "Session Recap" },
   { href: "/excel-practice", label: "Excel Practice" },
