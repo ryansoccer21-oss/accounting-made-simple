@@ -3,6 +3,7 @@ import SocialLinks from "./social-links";
 import { contactInfo, navLinks } from "../lib/site-data";
 
 const utilityLinks = [
+  { href: "/start-here", label: "Start Here" },
   { href: "/skill-check", label: "Skill Check" },
   { href: "/debits-credits-skill-check", label: "Debits & Credits Check" },
   { href: "/adjusting-entries-skill-check", label: "Adjusting Entries Check" },

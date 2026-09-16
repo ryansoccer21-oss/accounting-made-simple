@@ -5,6 +5,12 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { contactInfo, navLinks } from "../lib/site-data";
 
+const headerLinks = [
+  navLinks[0],
+  { href: "/start-here", label: "Start Here" },
+  ...navLinks.slice(1)
+];
+
 export default function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -31,7 +37,7 @@ export default function SiteHeader() {
           </button>
 
           <nav className={`${open ? "flex" : "hidden"} absolute left-0 right-0 top-[calc(100%+0.5rem)] flex-col gap-3 rounded-[28px] border border-[var(--line)] bg-white p-4 shadow-[0_24px_60px_rgba(15,23,42,0.08)] md:static md:flex md:flex-row md:items-center md:gap-4 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none`} id="site-nav">
-            {navLinks.map((link) => {
+            {headerLinks.map((link) => {
               const active = pathname === link.href;
               return (
                 <Link key={link.href} className={`text-sm font-semibold transition ${active ? "text-[color:var(--brand)]" : "text-slate-500 hover:text-[color:var(--brand)]"}`} href={link.href} onClick={() => setOpen(false)}>

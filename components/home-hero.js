@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { amsMethod, contactInfo, heroBadges, quizCenterUrl, serviceTopics, whoIHelp } from "../lib/site-data";
+import { amsMethod, contactInfo, heroBadges, serviceTopics, whoIHelp } from "../lib/site-data";
 
 export default function HomeHero() {
   return (
@@ -36,12 +36,12 @@ export default function HomeHero() {
             <a className="cta-primary" href={contactInfo.bookingUrl} rel="noopener noreferrer" target="_blank">
               Book a Free 30-Minute Session
             </a>
+            <Link className="cta-secondary" href="/start-here">
+              New Student? Start Here
+            </Link>
             <Link className="cta-secondary" href="/accounting">
               Explore Accounting Tutoring
             </Link>
-            <a className="cta-secondary" href={quizCenterUrl} rel="noopener noreferrer" target="_blank">
-              Free Quiz Center
-            </a>
           </div>
 
           <div className="mt-10 grid gap-4 border-t border-[color:var(--line)] pt-6 sm:grid-cols-3">
