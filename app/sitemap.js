@@ -3,6 +3,7 @@ const baseUrl = "https://accounting-made-simple.vercel.app";
 export default function sitemap() {
   return [
     "",
+    "/start-here",
     "/accounting",
     "/excel-tutor",
     "/excel-practice",
