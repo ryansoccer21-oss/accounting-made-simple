@@ -20,13 +20,13 @@ export default function HomePage() {
 
       <section className="site-shell pb-10">
         <div className="surface-card grid items-center gap-6 p-6 md:grid-cols-[220px_minmax(0,1fr)] md:p-8">
-          <div className="mx-auto h-[300px] w-[200px] overflow-hidden rounded-[24px] bg-slate-100 md:mx-0 md:h-[340px] md:w-[220px]">
+          <div className="mx-auto w-[220px] md:mx-0">
             <img
               src="/ryan-parks-320.svg"
               alt="Ryan Parks at his UMass Lowell graduation"
               width="391"
               height="684"
-              className="h-full w-full object-contain object-center"
+              className="block h-auto w-full"
             />
           </div>
           <div>
