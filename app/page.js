@@ -19,16 +19,7 @@ export default function HomePage() {
       <HomeHero />
 
       <section className="site-shell pb-10">
-        <div className="surface-card grid items-center gap-6 p-6 md:grid-cols-[220px_minmax(0,1fr)] md:p-8">
-          <div className="mx-auto w-[220px] md:mx-0">
-            <img
-              src="/ryan-parks-320.svg"
-              alt="Ryan Parks at his UMass Lowell graduation"
-              width="391"
-              height="684"
-              className="block h-auto w-full"
-            />
-          </div>
+        <div className="surface-card p-6 md:p-8">
           <div>
             <p className="eyebrow">Meet Your Tutor</p>
             <h2 className="text-3xl font-semibold text-slate-900">Ryan Parks</h2>
