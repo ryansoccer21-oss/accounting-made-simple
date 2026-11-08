@@ -18,6 +18,36 @@ export default function HomePage() {
     <>
       <HomeHero />
 
+      <section className="site-shell pb-10">
+        <div className="surface-card grid items-center gap-6 p-6 md:grid-cols-[220px_minmax(0,1fr)] md:p-8">
+          <div className="mx-auto h-52 w-52 overflow-hidden rounded-[24px] bg-slate-100 md:mx-0 md:h-[220px] md:w-[220px]">
+            <img
+              src="/ryan-parks-320.svg"
+              alt="Ryan Parks at his UMass Lowell graduation"
+              width="391"
+              height="684"
+              className="h-full w-full object-cover object-top"
+            />
+          </div>
+          <div>
+            <p className="eyebrow">Meet Your Tutor</p>
+            <h2 className="text-3xl font-semibold text-slate-900">Ryan Parks</h2>
+            <p className="mt-3 leading-7 text-slate-600">
+              I graduated from the University of Massachusetts Lowell with a B.S. in Accounting and a 3.79 GPA and was a member of the Honors College. I currently work as a Staff Accountant, am pursuing my CPA license, and have experience tutoring five individuals.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {["3.79 GPA", "UMass Lowell Honors College", "Staff Accountant", "CPA Candidate", "5 People Tutored"].map((item) => (
+                <span key={item} className="rounded-full border border-[var(--line)] bg-[color:var(--surface-soft)] px-3 py-1.5 text-xs font-semibold text-[color:var(--brand)]">{item}</span>
+              ))}
+            </div>
+            <Link href="/about" className="mt-5 inline-flex text-sm font-semibold text-[color:var(--brand)] hover:underline">
+              More about your tutor →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+
       <section className="site-shell grid gap-4 md:grid-cols-3">
         {trustPoints.map((point, index) => (
           <article key={point.title} className="surface-card bg-white/95 p-6">

@@ -24,13 +24,10 @@ export default function AboutPage() {
           <h2 className="section-title text-4xl md:text-5xl">Help students understand accounting, not just get through the assignment</h2>
           <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600">
             <p>
-              My name is Ryan Parks. I earned a bachelor's degree in Accounting from the University of Massachusetts Lowell and work professionally in accounting while continuing on the CPA path.
+              I'm an accounting graduate from the University of Massachusetts Lowell, where I earned my Bachelor's Degree in Accounting with a <strong>3.79 GPA</strong> and was a member of the <strong>Honors College</strong>. I currently work as a Staff Accountant and am pursuing my CPA license, allowing me to bring both academic knowledge and real-world accounting experience into my tutoring sessions.
             </p>
             <p>
-              I built Accounting Made Simple because accounting can become frustrating when students are shown a rule or answer without enough explanation of why it works. My goal is to slow down the reasoning, build a repeatable process, and help students become more independent problem solvers.
-            </p>
-            <p>
-              I also bring practical Excel experience into tutoring when it adds value. That can mean connecting an accounting concept to a schedule, reconciliation, analysis, or spreadsheet workflow instead of treating Excel as a completely separate subject.
+              Through my professional experience, I've worked with financial reporting, reconciliations, auditing, and other accounting processes. I've also gained hands-on tutoring experience working with five individuals. Through Accounting Made Simple, my goal is to make challenging accounting concepts easier to understand by providing clear explanations, practical examples, and personalized support tailored to each student's needs.
             </p>
           </div>
         </article>
